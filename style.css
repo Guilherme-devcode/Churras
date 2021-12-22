@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+	transition: all .2s linear;
+	text-decoration: none;
+}
+html{
+	overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body{
+	transition: 0.25s;
+
+	font-family: 'Ubuntu', sans-serif;
+	padding: 0;
+	margin: 0;
+
+	background: linear-gradient(90deg, rgba(0,82,212,1) 20%, rgba(67,100,247,1) 52%, rgba(111,177,252,1) 100%);
+}
+
+
+.container{
+	background: rgba(7, 28, 97, 0.233);
+	box-shadow: 0 8px 32px 0 rgba(192, 76, 76, 0.342);
+	backdrop-filter: blur( 11.5px );
+	-webkit-backdrop-filter: blur( 11.5px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	padding: 20px;
+	z-index: 1;
+}
+h1{
+	cursor: default;
+	color: white;
+	margin-top: 0;
+	text-transform: uppercase;
+	font-size: 27px;
+}
+
+input{
+	display: block;
+	width: 100%;
+	padding: 7px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+button{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #0c002b;
+    color: white;
+    padding: 10px 20px;
+    overflow: hidden;
+    transition: 0.25s;    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #0c002b;
+    padding: 10px 20px;
+    overflow: hidden;
+    transition: 0.25s;
+    border-style: none;
+    cursor: pointer;
+}
+button:hover{
+	color: black;
+    background: rgb(192, 76, 76);
+    box-shadow: 0 0 5px rgb(192, 76, 76), 0 0 20px rgb(192, 76, 76), 0 0 40px rgb(192, 76, 76);   
+
+}
+p{
+	font-size: 15px;
+	text-transform: uppercase;
+	color: white;
+	transition: 0.25s;
+	cursor: default;
+	
+}
+p:hover{
+ 
+	color: rgb(192, 76, 76);
+}
+body{ 
+	background: #0b152f;
+}
+
+/* SVG FIRE */
+
+
+.mo-fire {
+
+height: auto;
+position: fixed;
+left:20%;
+bottom: -50px;
+z-index: 0;
+}
+
+#svg-view {
+width: 252px;
+height: 125px;
+left: 0px;
+}
+
+.mo-fire svg {
+width: 100%;
+height: auto;
+position:relative;
+right:40px;
+}
+.flame {
+animation-name: flameDisappear;
+animation-duration: 2s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+opacity: 0.5;
+transform-origin: 45% 45% 0;
+}
+.flame.one {
+animation-delay: 1s;
+animation-duration: 3s;
+}
+.flame.two{
+animation-duration: 5s;
+animation-delay: 1s;
+}
+
+
+.flame-main {
+animation-name: flameMovement;
+animation-duration: 2s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+}
+.flame-main.one {
+animation-duration: 2.2s;
+animation-delay: 1s;
+}
+.flame-main.two {
+animation-duration: 2s;
+animation-delay: 1s;
+}
+.flame-main.three {
+animation-duration: 2.1s;
+animation-delay: 3s;
+}
+.flame-main.four {
+animation-duration: 3.2s;
+animation-delay: 4s;
+}
+.flame-main.five {
+animation-duration: 2.5s;
+animation-delay: 5s;
+}
+@keyframes flameMovement {
+50% {
+transform: scale(0.98,1.0) translate(0, 2px) rotate(-1deg);
+}
+}
+@keyframes flameDisappear {
+0%{
+transform: translate(0) rotate(180deg);
+}
+50% {
+ opacity: 1;
+}
+100% {
+transform: translate(-10px, -40px) rotate(180deg);
+opacity: 0;
+}
+}
+@media(max-width:1024px) {
+	h1{
+		font-size: 4.5em;
+	}
+	input{
+		font-size: 3.5em;
+	}
+	.container {
+		padding: 3em;
+		max-width: 50em;
+	}
+	button{
+		top: 0.2em;
+		font-size: 2.5em;
+		padding: 1em;
+	}
+	p{
+		font-size: 2.5em;
+	}
+	
+	.mo-fire{
+		position: relative;
+		height: 50px;
+		position: fixed;
+		left: -10px;
+		bottom: 65em;
+		z-index: 0;
+	}
+	.mo-fire svg {
+		width: 100em;
+		height: 550em;
+		height: 100em;
+		position:relative;
+		right:40px;
+		}
+  } 
